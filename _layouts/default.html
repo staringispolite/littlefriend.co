@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/basscss@7.1.1/css/basscss.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,900i|Source+Serif+Pro" rel="stylesheet">
+    <link href="https://palx.jxnblk.com/F7DBD6.css" rel="stylesheet">
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+      body, .serif {
+        font-family: 'Source Serif Pro', serif;
+        color: #333333;
+      }
+      h1, h2, h3, h4, h5, h6, .sans {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+      .container {
+        max-width: 50rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+      }
+    </style>
+  </head>
+  <body class="">
+    {{ content }}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script src="{{ "/sticky.min.js" | relative_url }}"></script>
+    <script>
+          new Sticky({
+            target: '.js-sticky',
+            offset: 200
+          });
+
+      var els = document.querySelectorAll('.js-ornament');
+
+var nodeList = anime({
+  targets: els,
+  translateY: function(el, i, l) {
+    return -20 - (i * 5);
+  },
+  direction: 'alternate',
+  easing: 'linear',
+  loop: true,
+  duration: function(el, i, l) { return 5000 + (i * 1000); },
+  elasticity: 600
+});
+    </script>
+  </body>
+</html>
+

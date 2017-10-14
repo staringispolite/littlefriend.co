@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+<div class="relative">
+<svg viewbox="0 0 100 25" class="absolute z1 bottom-0" style="">
+  <path fill="#fdfbf8" opacity="0.5" d="M0 30 V15 Q30 3 60 15 V30z" />
+  <path fill="#fcf8f1" d="M0 30 V12 Q30 17 55 12 T100 11 V30z" />
+</svg>
+
+<svg viewbox="0 0 100 25" class="absolute z1 top-0" style="transform: rotate(180deg);">
+  <path fill="#fdf9f8" opacity="0.5" d="M0 30 V15 Q30 3 60 15 V30z" />
+  <path fill="#fcf3f2" d="M0 30 V12 Q30 17 55 12 T100 11 V30z" />
+</svg>
+
+<header class="relative z2" id="wave">
+<section class="container mx-auto">
+  <nav class="flex flex-center py2">
+    <div class="flex-auto">
+      <a class="black bold h2" href="">
+        <img src="https://icon.now.sh/tonality/48/978776">
+      </a>
+    </div>
+    <a class="black bold flex-none mr2 sans" href="">Pricing</a>
+    <a class="black bold flex-none mr2  sans" href="">FAQ</a>
+    <a class="black bold flex-none sans" href="">Contact</a>
+  </nav>
+</section>
+
+<section class="container mx-auto center">
+  <div class="flex flex-column px2 py4" style="min-height: 60vh;">
+
+  <div class="flex-auto"></div>
+    <div class="flex-none">
+    <h1 class="h1 serif mt4 mb2" style="font-size: 60px;">Say hello to Little Friend</h1>
+    <h2 class="h3 gray6 regular mt0 mb3">Your new best friend for Instagram and Facebook marketing.</h2>
+    <p class="mb4">
+      <a class="btn btn-primary bg-red5 gray9 rounded h3 sans px3">
+        Let's get started
+      </a>
+    </p>
+  </div>
+  <div class="flex-auto mb4"></div>
+  </div>
+</section>
+</header>
+</div>
+<div class="bg-gray0 py4 clearfix">
+  <div class="container mx-auto">
+    <div class="col col-12 md-col-8">
+      <h3 class="h1 mt0 serif">Our process</h3>
+      <p class="sans gray8">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      <p class="sans gray8">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+    </div>
+</div>
+</div>
+<div class="py4 clearfix">
+  <div class="container mx-auto">
+    <div class="center">
+      <h3 class="h1 mt0 mb4 serif">Our features</h3>
+    </div>
+    <div class="flex flex-wrap">
+    {% for f in site.data.features %}
+    <div class="col-12 md-col-6 px2 clearfix border-box mb3">
+      <img src="https://icon.now.sh/{{ f.icon }}/24/978776" class="left mr2">
+      <div class="overflow-hidden">
+      <h4 class="serif h3 mt0 mb1">{{ f.title }}</h4>
+      <p class="sans gray7">{{ f.copy }}</p>
+    </div>
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+</div>
+<div class="py4 clearfix bg-gray0">
+  <div class="container mx-auto">
+    <h3 class="h1 mt0 mb4 serif">Featured clients</h3>
+    <div class="flex flex-wrap mxn2">
+    {% for c in site.data.clients %}
+    <div class="col-6 md-col-3 px2 clearfix border-box mb3">
+      <img src="{{ c.image_url }}" class="col-12">
+      <h4 class="sans h4 mt0 mb1 center">{{ c.title }}</h4>
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+</div>
