@@ -50,24 +50,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script src="{{ "/sticky.min.js" | relative_url }}"></script>
     <script>
-          new Sticky({
-            target: '.js-sticky',
-            offset: 200
-          });
+      new Sticky({
+        target: '.js-sticky',
+        offset: 200
+      });
 
       var els = document.querySelectorAll('.js-ornament');
 
-var nodeList = anime({
-  targets: els,
-  translateY: function(el, i, l) {
-    return -20 - (i * 5);
-  },
-  direction: 'alternate',
-  easing: 'linear',
-  loop: true,
-  duration: function(el, i, l) { return 5000 + (i * 1000); },
-  elasticity: 600
-});
+      var nodeList = anime({
+        targets: els,
+        translateY: function(el, i, l) {
+          return -20 - (i * 5);
+        },
+        direction: 'alternate',
+        easing: 'linear',
+        loop: true,
+        duration: function(el, i, l) { return 5000 + (i * 1000); },
+        elasticity: 600
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108369789-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-108369789-1');
     </script>
   </body>
 </html>
