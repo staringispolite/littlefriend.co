@@ -27,32 +27,41 @@ layout: default
 <section class="container mx-auto center">
   <div class="flex flex-column px2 py4" style="min-height: 60vh;">
 
-  <div class="flex-auto"></div>
+    <div class="flex-auto"></div>
     <div class="flex-none">
-    <h1 class="headline h1 serif mt4 mb2">Let's do this!</h1>
-    <h2 class="h3 gray6 regular mt0 mb3">Clicking below will launch a secure payment form, to initiate your subscription, which will charge $500 no, then again monthly. Cancel any time with 30 days notice. Includes:</h2>
-    <ul>
-      <li>Up to 3 free hours of setup work based on automation rules we set together.</li>
-      <li>Hosted cloud server with its own IP to run for your account. Cycled regularly.</li>
-      <li>Reporting: follower/following graphs, in addition to Instagram's native.</li>
-      <li>Ongoing maintenance and on-call system administration.</li>
-      <li>Peace of mind - fully delegate Instagram to us, just pop in to warm or close customers in the comments.</li>
-    </ul>
-    <p class="mb4">
-      <form action="https://vkc2aicweb.execute-api.us-east-1.amazonaws.com/prod/LittleFriendStripeMicroservice" method="POST">
-        <script
-          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="pk_jkRpz9dlj92IFkaUfRAQIGo34PelJ"
-          data-image="http://littlefriend.co/img/logo-512.jpg"
-          data-name="Little Friend"
-          data-description="Monthly hosted Instagram automation"
-          data-amount="50000"
-          data-label="Sign Me Up! &raquo;">
-        </script>
-      </form>
-    </p>
-  </div>
-  <div class="flex-auto mb4"></div>
+      <h1 class="headline h1 serif mt4 mb2">Let's do this!</h1>
+      <h2 class="h3 gray6 regular mt0 mb3">Clicking below will launch a secure payment form, to initiate your subscription, which will charge $500 no, then again monthly. Cancel any time with 30 days notice.</h2>
+      <p class="mb4">
+        <form action="https://vkc2aicweb.execute-api.us-east-1.amazonaws.com/prod/LittleFriendStripeMicroservice" method="POST">
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_jkRpz9dlj92IFkaUfRAQIGo34PelJ"
+            data-image="http://littlefriend.co/img/logo-512.jpg"
+            data-name="Little Friend"
+            data-description="Monthly hosted Instagram automation"
+            data-amount="50000"
+            data-label="Sign Me Up! &raquo;">
+          </script>
+        </form>
+      </p>
+    </div>
+    <div class="clearfix">
+      <div class="col col-2"></div>
+      <div class="col col-8">
+        <h2 class="h3 gray6 regular mt0 mb3">Includes:</h2>
+        <div class="clearfix">
+          <ul class="list-reset gray6 regular">
+            <li>Up to 3 free hours of setup work based on automation rules we set together.</li>
+            <li>Hosted cloud server with its own IP to run for your account. Cycled regularly.</li>
+            <li>Reporting: follower/following graphs, in addition to Instagram's native.</li>
+            <li>Ongoing maintenance and on-call system administration.</li>
+            <li>Peace of mind - fully delegate Instagram to us, just pop in to warm or close customers in the comments.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col col-2"></div>
+    </div>
+    <div class="flex-auto mb4"></div>
   </div>
 </section>
 </header>
