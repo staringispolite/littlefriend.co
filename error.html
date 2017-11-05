@@ -30,7 +30,7 @@ layout: default
     <div class="flex-auto"></div>
     <div class="flex-none">
       <h1 class="headline h1 serif mt2 mb2">Whoops!</h1>
-      <h2 class="h3 gray6 regular mt0 mb4">Something went wrong. Click "back" to try again, and make sure the credit card info you submitted was correct.</h2>
+      <h2 class="h3 gray6 regular mt0 mb2">Something went wrong. Click "back" to try again, and make sure the credit card info you submitted was correct.</h2>
       <h2 class="h3 gray6 regular mt0 mb4 display-none" id="errorType"></h2>
     </div>
     <div class="flex-auto mb4"></div>
@@ -45,7 +45,7 @@ layout: default
     }
     var errorType = $.urlParam('type');
     if (errorType) {
-      $('#errorType').html("The error code from Stripe was '" + decodeURIComponent(errorType) + "'").show();
+      $('#errorType').html("The error code from Stripe was '" + decodeURIComponent(errorType) + "'").removeClass('display-none');
     }
   });
 </script>
