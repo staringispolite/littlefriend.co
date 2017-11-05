@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="relative">
+<svg viewbox="0 0 100 25" class="absolute z1 bottom-0" style="">
+  <path fill="#fdfbf8" opacity="0.5" d="M0 30 V15 Q30 3 60 15 V30z" />
+  <path fill="#fcf8f1" d="M0 30 V12 Q30 17 55 12 T100 11 V30z" />
+</svg>
+
+<svg viewbox="0 0 100 25" class="absolute z1 top-0" style="transform: rotate(180deg);">
+  <path fill="#fdf9f8" opacity="0.5" d="M0 30 V15 Q30 3 60 15 V30z" />
+  <path fill="#fcf3f2" d="M0 30 V12 Q30 17 55 12 T100 11 V30z" />
+</svg>
+
+<header class="relative z2" id="wave">
+<section class="container mx-auto">
+  <nav class="flex flex-center py2">
+    <div class="flex-auto">
+      <a class="black bold h2" href="">
+        <img src="https://icon.now.sh/tonality/48/978776">
+      </a>
+    </div>
+  </nav>
+</section>
+
+<section class="container mx-auto center">
+  <div class="flex flex-column px2 py4" style="min-height: 60vh;">
+
+    <div class="flex-auto"></div>
+    <div class="flex-none">
+      <h1 class="headline h1 serif mt2 mb2">Whoops! Something went wrong</h1>
+      <h2 class="h3 gray6 regular mt0 mb4">Click "back" to try again, and make sure the credit card info you submitted was correct</h2>
+      <h2 class="h3 gray6 regular mt0 mb4 display-none" id="errorType"></h2>
+    </div>
+    <div class="flex-auto mb4"></div>
+  </div>
+</section>
+</header>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $.urlParam = function(name){
+      var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+      return results[1] || 0;
+    }
+    var errorType = $.urlParam('type');
+    if (errorType) {
+      $('#errorType').html("The error code from Stripe was '" + decodeURIComponent(errorType) + "'").show();
+    }
+  }
+</script>
